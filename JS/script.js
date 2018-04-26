@@ -2,6 +2,10 @@ var screen, input, frames, spFrame, lvFrame;
 var alSprite, taSprite, ciSprite;
 var aliens, dir, tank, bullets, cities;
 
+
+
+
+
 function main() {
   screen = new Screen(504, 600);
   input = new InputHandeler();
@@ -175,7 +179,7 @@ $(window).keydown(function(e) {
            switch (e.keyCode) {
                 case 37: input.left = true; break;
                 case 39: input.right = true; break;
-                //case 32: input.fire = true; break;
+                case 32: input.fire = true; break;
            }
       });
 
@@ -224,7 +228,7 @@ $(window).keydown(function(e) {
             input.right = false;
           }
           var gpbtnA = gp.buttons[0];
-          if(gpbtnA.touched) {
+          if(gpbtnA.pressed) {
             input.fire = true;
           } else {
             input.fire = false;

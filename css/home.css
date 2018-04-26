@@ -1,0 +1,51 @@
+/*  general CSS  */
+body {
+   font-family: 'Press Start 2P', cursive;
+   background-color: black;
+ }
+h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 80px;
+}
+p {
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+}
+
+/*  image */
+img {
+  height: 40px;
+  width: 40px;
+}
+.invader {
+  height: 170px;
+  width: 220px;
+}
+.inv1 {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/*  spaceBar image  */
+.spacebar {
+  width: 200px;
+}
+
+/*  button  */
+a {
+  text-decoration: none;
+}
+button {
+  height: 100px;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.btn {
+  font-family: 'Press Start 2P';
+  font-size: 30px;
+  text-transform: uppercase;
+}
