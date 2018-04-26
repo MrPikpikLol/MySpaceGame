@@ -18,7 +18,6 @@ function main() {
       [new Sprite(this, 38, 0, 24, 16), new Sprite(this, 38, 16, 24, 16)]
     ];
     taSprite = new Sprite(this, 62, 0, 22, 16);
-    ciSprite = new Sprite(this, 84, 8, 36, 24);
     init();
     run();
   });
@@ -118,7 +117,8 @@ function update() {
               break
             };
             case 0 : {
-              return alert("BIEN JOUÉ");
+            window.location.assign("thank.html")
+
             };
           }
         }
@@ -234,7 +234,7 @@ $(window).keydown(function(e) {
           var gpbtnA = gp.buttons[0];
           if(gpbtnA.pressed > 0.1) {
             input.fire = true;
-          } else if (gpbtnA.pressed == 1) {
+          } else if (gpbtnA.pressed === 1) {
             input.fire = false;
           } else {
             input.fire = false;
