@@ -79,6 +79,8 @@ function update() {
     bullets.push(new Bullet(tank.x + 10, tank.y, -8, 2, 6, "#fff"));
   }
 
+
+
   for (var i = 0, len = bullets.length; i < len; i++ ) {
     var b = bullets[i];
     b.update();
@@ -115,9 +117,13 @@ function update() {
               this.lvFrame = 6;
               break
             };
+            case 0 : {
+              return alert("BIEN JOUÉ");
+            };
           }
         }
       }
+
   }
 
   if (Math.random() < 0.03 && aliens.length > 0) {
@@ -147,8 +153,6 @@ function update() {
       aliens[i].x += 30 * dir;
       aliens[i].y += 30;
     }
-
-
   }
  }
 };
@@ -179,7 +183,7 @@ $(window).keydown(function(e) {
            switch (e.keyCode) {
                 case 37: input.left = true; break;
                 case 39: input.right = true; break;
-                case 32: input.fire = true; break;
+                //case 32: input.fire = true; break;
            }
       });
 
@@ -187,7 +191,7 @@ $(window).keydown(function(e) {
            switch (e.keyCode) {
                 case 37: input.left = false; break;
                 case 39: input.right = false; break;
-                case 32: input.fire = false; break;
+                //case 32: input.fire = false; break;
            }
       });
       if(canGame()) {
@@ -228,8 +232,10 @@ $(window).keydown(function(e) {
             input.right = false;
           }
           var gpbtnA = gp.buttons[0];
-          if(gpbtnA.pressed) {
+          if(gpbtnA.pressed > 0.1) {
             input.fire = true;
+          } else if (gpbtnA.pressed == 1) {
+            input.fire = false;
           } else {
             input.fire = false;
           }

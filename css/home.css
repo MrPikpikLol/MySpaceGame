@@ -4,7 +4,7 @@ body {
    background-color: black;
  }
 h1 {
-  color: #fff;
+  animation: pulse 4s infinite;
   text-align: center;
   font-size: 80px;
 }
@@ -27,7 +27,20 @@ img {
   text-align: center;
   margin: 0 auto;
 }
-
+@keyframes pulse {
+  0% {
+    color: #36bb4c;
+  }
+  25% {
+    color: #bb6236;
+  }
+  50% {
+    color: #36bb4c;
+  }
+  100% {
+    color: #FF4136;
+  }
+}
 /*  spaceBar image  */
 .spacebar {
   width: 200px;

@@ -1,9 +1,25 @@
 body {
   font-family: 'Press Start 2P', cursive;
   background-color: black;
+  color: #fff;
 }
 h1 {
+  animation: pulse 4s infinite;
   text-align: center;
   font-size: 60px;
-  color: #fff;
+}
+
+@keyframes pulse {
+  0% {
+    color: #36bb4c;
+  }
+  25% {
+    color: #bb6236;
+  }
+  50% {
+    color: #36bb4c;
+  }
+  100% {
+    color: #FF4136;
+  }
 }

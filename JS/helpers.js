@@ -2,6 +2,8 @@
 function AABBIntersect(ax, ay, aw, ah, bx, by, bw, bh) {
   return ax < bx+bw && bx < ax+aw && ay < by+bh && by < ay+ah;
 };
+
+
 //bullets
 function Bullet(x, y, vely, w, h, color) {
   this.x = x;
@@ -31,7 +33,7 @@ Screen.prototype.clear = function() {
 Screen.prototype.drawSprite = function(sp, x, y) {
   this.ctx.drawImage(sp.img, sp.x, sp.y, sp.w, sp.h, x, y, sp.w, sp.h);
 };
-Screen.prototype.drawBullet = function (bullet) {
+Screen.prototype.drawBullet = function(bullet) {
   this.ctx.fillStyle = bullet.color;
   this.ctx.fillRect(bullet.x, bullet.y, bullet.width, bullet.height);
 };
@@ -60,6 +62,7 @@ function InputHandeler() {
     delete _this.down[evt.keyCode];
     delete _this.pressed[evt.keyCode];
   });
+
 
 };
 
